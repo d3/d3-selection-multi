@@ -4,8 +4,8 @@
       "path": ".",
       "file_exclude_patterns": [
         "index.sublime-workspace",
-        "d3-selection.js",
-        "d3-selection.min.js"
+        "d3-selection-multi.js",
+        "d3-selection-multi.min.js"
       ],
       "folder_exclude_patterns": [
       ]
