@@ -1,0 +1,16 @@
+{
+  "name": "d3-selection-multi",
+  "version": "1.0.0",
+  "description": "Extension to d3-selection to add multi-value map syntax.",
+  "main": "lib/d3/selection/multi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d3/d3-selection-multi.git"
+  },
+  "devDependencies": {
+    "browserify": "10",
+    "jsdom": "3",
+    "uglify-js": "2",
+    "vows": "0.8"
+  }
+}
