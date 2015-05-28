@@ -1,7 +1,7 @@
 {
   "name": "d3-selection-multi",
   "version": "0.2.2",
-  "description": "Extension to d3-selection to add multi-value map syntax.",
+  "description": "Multi-value map syntax for D3 selections.",
   "main": "dist/d3-selection-multi",
   "jsnext:main": "index",
   "repository": {
