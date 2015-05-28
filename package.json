@@ -3,6 +3,7 @@
   "version": "0.2.2",
   "description": "Extension to d3-selection to add multi-value map syntax.",
   "main": "dist/d3-selection-multi",
+  "jsnext:main": "index",
   "repository": {
     "type": "git",
     "url": "https://github.com/d3/d3-selection-multi.git"
