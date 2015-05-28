@@ -9,9 +9,9 @@ all: $(GENERATED_FILES)
 test: all
 	node_modules/.bin/faucet `find test -name '*-test.js'`
 
-d3-selection-multi.js: $(shell node_modules/.bin/browserify index.js --list)
+d3-selection-multi.js: $(wildcard src/*.js) index.js
 	rm -f $@
-	node_modules/.bin/browserify --standalone d3 index.js > $@
+	node_modules/.bin/d3-bundler -- index.js > $@
 	chmod a-w $@
 
 d3-selection-multi.min.js: d3-selection-multi.js
