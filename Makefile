@@ -1,6 +1,6 @@
 GENERATED_FILES = \
-	d3-selection-multi.js \
-	d3-selection-multi.min.js
+	dist/d3-selection-multi.js \
+	dist/d3-selection-multi.min.js
 
 all: $(GENERATED_FILES)
 
@@ -9,12 +9,12 @@ all: $(GENERATED_FILES)
 test: all
 	node_modules/.bin/faucet `find test -name '*-test.js'`
 
-d3-selection-multi.js: $(wildcard src/*.js) index.js
+dist/d3-selection-multi.js: $(wildcard src/*.js) index.js
 	rm -f $@
 	node_modules/.bin/d3-bundler -- index.js > $@
 	chmod a-w $@
 
-d3-selection-multi.min.js: d3-selection-multi.js
+dist/d3-selection-multi.min.js: dist/d3-selection-multi.js
 	rm -f $@
 	node_modules/.bin/uglifyjs $^ -c -m -o $@
 	chmod a-w $@
