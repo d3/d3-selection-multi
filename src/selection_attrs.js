@@ -1,4 +1,4 @@
-var namespace = d3.namespace;
+import {namespace} from "d3-selection";
 
 export default function(map) {
   if (typeof map === "function") return this.each(function() {
