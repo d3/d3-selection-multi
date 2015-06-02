@@ -11,7 +11,7 @@ import {
   touches
 } from "d3-selection";
 
-import "../index";
+import "./index";
 
 export default {
   get event() { return event; },
