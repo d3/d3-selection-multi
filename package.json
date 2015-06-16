@@ -1,6 +1,6 @@
 {
   "name": "d3-selection-multi",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Multi-value map syntax for D3 selections.",
   "keywords": [
     "d3",
@@ -22,7 +22,7 @@
   "scripts": {
     "pretest": "mkdir -p build && d3-bundler --polyfill-map --format=umd --name=d3 -- d3.js > build/d3.js",
     "test": "faucet `find test -name '*-test.js'`",
-    "prepublish": "npm run test && uglifyjs build/d3.js -c -m -o build/d3.min.js"
+    "prepublish": "npm run test && uglifyjs build/d3.js -c -m -o build/d3.min.js && rm -f build/d3.zip && zip -j build/d3.zip -- LICENSE README.md build/d3.js build/d3.min.js"
   },
   "devDependencies": {
     "d3-bundler": "~0.2.5",
