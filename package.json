@@ -1,6 +1,6 @@
 {
   "name": "d3-selection-multi",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Multi-value map syntax for D3 selections.",
   "keywords": [
     "d3",
@@ -13,23 +13,23 @@
     "name": "Mike Bostock",
     "url": "http://bost.ocks.org/mike"
   },
-  "main": "build/selection-multi.cjs",
+  "main": "build/d3-selection-multi.js",
   "jsnext:main": "index",
   "repository": {
     "type": "git",
     "url": "https://github.com/d3/d3-selection-multi.git"
   },
   "scripts": {
-    "pretest": "mkdir -p build && d3-bundler -x -f cjs -o build/selection-multi.cjs.js",
+    "pretest": "mkdir -p build && node -e 'process.stdout.write(\"var version = \\\"\" + require(\"./package.json\").version + \"\\\"; export * from \\\"../index\\\"; export {version};\");' > build/bundle.js && rollup -f umd -g d3-selection:d3_selection -u d3-selection-multi -n d3_selection_multi -o build/d3-selection-multi.js -- build/bundle.js",
     "test": "faucet `find test -name '*-test.js'`",
-    "prepublish": "npm run test && d3-bundler -n selection -o build/selection-multi.js -- selection.js && uglifyjs build/selection-multi.js -c -m -o build/selection-multi.min.js && rm -f build/selection-multi.zip && zip -j build/selection-multi.zip -- LICENSE README.md build/selection-multi.js build/selection-multi.min.js"
+    "prepublish": "npm run test && uglifyjs build/d3-selection-multi.js -c -m -o build/d3-selection-multi.min.js && rm -f build/d3-selection-multi.zip && zip -j build/d3-selection-multi.zip -- LICENSE README.md build/d3-selection-multi.js build/d3-selection-multi.min.js"
   },
   "dependencies": {
-    "d3-selection": "~0.4.10"
+    "d3-selection": "~0.4.12"
   },
   "devDependencies": {
-    "d3-bundler": "~0.4.0",
     "faucet": "0.0",
+    "rollup": "0.20.5",
     "jsdom": "7",
     "tape": "4",
     "uglify-js": "2"
