@@ -23,7 +23,7 @@
     "pretest": "mkdir -p build && node -e 'process.stdout.write(\"var version = \\\"\" + require(\"./package.json\").version + \"\\\"; export * from \\\"../index\\\"; export {version};\");' > build/bundle.js && rollup -f umd -g d3-selection:d3_selection -n d3_selection_multi -o build/d3-selection-multi.js -- build/bundle.js",
     "test": "faucet `find test -name '*-test.js'`",
     "prepublish": "npm run test && uglifyjs build/d3-selection-multi.js -c -m -o build/d3-selection-multi.min.js && rm -f build/d3-selection-multi.zip && zip -j build/d3-selection-multi.zip -- LICENSE README.md build/d3-selection-multi.js build/d3-selection-multi.min.js",
-    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git tag -am \"Release $VERSION.\" v${VERSION} && git push --tags && cp build/d3-selection-multi.js ../d3.github.com/d3-selection-multi.v0.2.js && cp build/d3-selection-multi.min.js ../d3.github.com/d3-selection-multi.v0.2.min.js && cd ../d3.github.com && git add d3-selection-multi.v0.2.js d3-selection-multi.v0.2.min.js && git commit -m \"d3-selection-multi ${VERSION}\" && git push"
+    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cp build/d3-selection-multi.js ../d3.github.com/d3-selection-multi.v0.2.js && cp build/d3-selection-multi.min.js ../d3.github.com/d3-selection-multi.v0.2.min.js && cd ../d3.github.com && git add d3-selection-multi.v0.2.js d3-selection-multi.v0.2.min.js && git commit -m \"d3-selection-multi ${VERSION}\" && git push"
   },
   "dependencies": {
     "d3-selection": "~0.6.5"
