@@ -26,7 +26,7 @@
     "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cp build/d3-selection-multi.js ../d3.github.com/d3-selection-multi.v0.2.js && cp build/d3-selection-multi.min.js ../d3.github.com/d3-selection-multi.v0.2.min.js && cd ../d3.github.com && git add d3-selection-multi.v0.2.js d3-selection-multi.v0.2.min.js && git commit -m \"d3-selection-multi ${VERSION}\" && git push"
   },
   "dependencies": {
-    "d3-selection": "~0.6.5"
+    "d3-selection": "~0.7.0"
   },
   "devDependencies": {
     "faucet": "0.0",
