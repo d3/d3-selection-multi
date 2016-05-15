@@ -18,4 +18,4 @@ export default function(map, priority) {
   }
 
   return this;
-};
+}
