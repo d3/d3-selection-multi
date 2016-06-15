@@ -1,6 +1,6 @@
 {
   "name": "d3-selection-multi",
-  "version": "0.2.10",
+  "version": "0.3.0",
   "description": "Multi-value map syntax for D3 selections.",
   "keywords": [
     "d3",
