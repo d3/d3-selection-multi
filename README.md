@@ -4,14 +4,14 @@ Multi-value map syntax for [selections](https://github.com/d3/d3-selection).
 
 ## Installing
 
-If you use NPM, `npm install d3-selection-multi`. Otherwise, download the [latest release](https://github.com/d3/d3-selection-multi/releases/latest). You can also load directly from [d3js.org](https://d3js.org), either as a [standalone library](https://d3js.org/d3-selection-multi.v0.2.min.js) or as part of [D3 4.0](https://github.com/d3/d3). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3_selection_multi` global is exported:
+If you use NPM, `npm install d3-selection-multi`. Otherwise, download the [latest release](https://github.com/d3/d3-selection-multi/releases/latest). You can also load directly from [d3js.org](https://d3js.org), either as a [standalone library](https://d3js.org/d3-selection-multi.v0.3.min.js) or as part of [D3 4.0](https://github.com/d3/d3). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3` global is exported:
 
 ```html
-<script src="https://d3js.org/d3-selection.v0.7.min.js"></script>
-<script src="https://d3js.org/d3-selection-multi.v0.2.min.js"></script>
+<script src="https://d3js.org/d3-selection.v0.9.min.js"></script>
+<script src="https://d3js.org/d3-selection-multi.v0.3.min.js"></script>
 <script>
 
-var div = d3_selection.selectAll("div");
+var div = d3.selectAll("div");
 
 </script>
 ```
