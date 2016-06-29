@@ -4,6 +4,7 @@
   "description": "Multi-value map syntax for D3 selections.",
   "keywords": [
     "d3",
+    "d3-module",
     "dom",
     "selection"
   ],
@@ -23,7 +24,7 @@
     "pretest": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -g d3-selection:d3,d3-transition:d3 -n d3 -o build/d3-selection-multi.js -- index.js",
     "test": "tape 'test/**/*-test.js' && eslint index.js src",
     "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" build/d3-selection-multi.js -c -m -o build/d3-selection-multi.min.js",
-    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cp build/d3-selection-multi.js ../d3.github.com/d3-selection-multi.v0.3.js && cp build/d3-selection-multi.min.js ../d3.github.com/d3-selection-multi.v0.3.min.js && cd ../d3.github.com && git add d3-selection-multi.v0.3.js d3-selection-multi.v0.3.min.js && git commit -m \"d3-selection-multi ${VERSION}\" && git push && cd - && zip -j build/d3-selection-multi.zip -- LICENSE README.md build/d3-selection-multi.js build/d3-selection-multi.min.js"
+    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cp build/d3-selection-multi.js ../d3.github.com/d3-selection-multi.v0.4.js && cp build/d3-selection-multi.min.js ../d3.github.com/d3-selection-multi.v0.4.min.js && cd ../d3.github.com && git add d3-selection-multi.v0.4.js d3-selection-multi.v0.4.min.js && git commit -m \"d3-selection-multi ${VERSION}\" && git push && cd - && zip -j build/d3-selection-multi.zip -- LICENSE README.md build/d3-selection-multi.js build/d3-selection-multi.min.js"
   },
   "dependencies": {
     "d3-selection": "1",
