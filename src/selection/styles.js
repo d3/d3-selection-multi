@@ -1,21 +1,17 @@
-export default function(map, priority) {
-  if (arguments.length < 2) priority = "";
+import {select} from "d3-selection";
 
-  if (typeof map === "function") return this.each(function() {
-    var x = map.apply(this, arguments);
-    for (var name in x) {
-      var value = x[name];
-      if (value == null) {
-        this.style.removeProperty(name);
-      } else {
-        this.style.setProperty(name, value, priority);
-      }
-    }
+function stylesFunction(selection, map, priority) {
+  return selection.each(function() {
+    var x = map.apply(this, arguments), s = select(this);
+    for (var name in x) s.style(name, x[name], priority);
   });
+}
 
-  for (var name in map) {
-    this.style(name, map[name], priority);
-  }
+function stylesObject(selection, map, priority) {
+  for (var name in map) selection.style(name, map[name], priority);
+  return selection;
+}
 
-  return this;
+export default function(map, priority) {
+  return (typeof map === "function" ? stylesFunction : stylesObject)(this, map, priority == null ? "" : priority);
 }

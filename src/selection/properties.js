@@ -1,19 +1,17 @@
-export default function(map) {
-  if (typeof map === "function") return this.each(function() {
-    var x = map.apply(this, arguments);
-    for (var name in x) {
-      var value = x[name];
-      if (value == null) {
-        delete this[name];
-      } else {
-        this[name] = value;
-      }
-    }
+import {select} from "d3-selection";
+
+function propertiesFunction(selection, map) {
+  return selection.each(function() {
+    var x = map.apply(this, arguments), s = select(this);
+    for (var name in x) s.property(name, x[name]);
   });
+}
 
-  for (var name in map) {
-    this.property(name, map[name]);
-  }
+function propertiesObject(selection, map) {
+  for (var name in map) selection.property(name, map[name]);
+  return selection;
+}
 
-  return this;
+export default function(map) {
+  return (typeof map === "function" ? propertiesFunction : propertiesObject)(this, map);
 }

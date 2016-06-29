@@ -1,13 +1,14 @@
 # d3-selection-multi
 
-Multi-value map syntax for [selections](https://github.com/d3/d3-selection).
+Multi-value map syntax for [selections](https://github.com/d3/d3-selection) and [transitions](https://github.com/d3/d3-transition).
 
 ## Installing
 
 If you use NPM, `npm install d3-selection-multi`. Otherwise, download the [latest release](https://github.com/d3/d3-selection-multi/releases/latest). You can also load directly from [d3js.org](https://d3js.org), either as a [standalone library](https://d3js.org/d3-selection-multi.v0.3.min.js) or as part of [D3 4.0](https://github.com/d3/d3). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3` global is exported:
 
 ```html
-<script src="https://d3js.org/d3-selection.v0.9.min.js"></script>
+<script src="https://d3js.org/d3-selection.v1.min.js"></script>
+<script src="https://d3js.org/d3-transition.v1.min.js"></script>
 <script src="https://d3js.org/d3-selection-multi.v0.3.min.js"></script>
 <script>
 
@@ -31,5 +32,13 @@ var div = d3.selectAll("div");
 …
 
 <a name="selection_properties" href="#selection_properties">#</a> <i>selection</i>.<b>properties</b>(<i>object</i>)
+
+…
+
+<a name="transition_attrs" href="#transition_attrs">#</a> <i>transition</i>.<b>attrs</b>(<i>object</i>)
+
+…
+
+<a name="transition_styles" href="#transition_styles">#</a> <i>transition</i>.<b>styles</b>(<i>object</i>)
 
 …
