@@ -1,7 +1,7 @@
 import {selection} from "d3-selection";
-import selection_attrs from "./src/selection_attrs";
-import selection_styles from "./src/selection_styles";
-import selection_properties from "./src/selection_properties";
+import selection_attrs from "./src/selection/attrs";
+import selection_styles from "./src/selection/styles";
+import selection_properties from "./src/selection/properties";
 
 selection.prototype.attrs = selection_attrs;
 selection.prototype.styles = selection_styles;
