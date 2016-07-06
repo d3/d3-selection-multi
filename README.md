@@ -24,11 +24,18 @@ var div = d3.selectAll("div")
 </script>
 ```
 
-The [D3 default bundle](https://github.com/d3/d3) can instead be used as:
+Or, to use the [D3 default bundle](https://github.com/d3/d3):
 
 ```html
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+<script>
+
+var div = d3.selectAll("div")
+    .attrs({"title": "Hello, world!"})
+    .styles({"color": "red"});
+
+</script>
 ```
 
 [Try d3-selection-multi in your browser.](https://tonicdev.com/npm/d3-selection-multi)
