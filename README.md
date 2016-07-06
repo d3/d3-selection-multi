@@ -24,7 +24,7 @@ var div = d3.selectAll("div")
 </script>
 ```
 
-Or, to use the [D3 default bundle](https://github.com/d3/d3):
+Or, in combination with the [D3 default bundle](https://github.com/d3/d3):
 
 ```html
 <script src="https://d3js.org/d3.v4.min.js"></script>
