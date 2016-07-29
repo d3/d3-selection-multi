@@ -135,8 +135,8 @@ Passing a function to *selection*.properties is convenient for sharing some comp
 
 <a name="transition_attrs" href="#transition_attrs">#</a> <i>transition</i>.<b>attrs</b>(<i>values</i>)
 
-Equivalent to [*selection*.attrs](#selection_attrs), but for transitions, on top of [*transition*.attr](https://github.com/d3/d3-transition#transition_attr).
+Like [*selection*.attrs](#selection_attrs), but for [*transition*.attr](https://github.com/d3/d3-transition#transition_attr).
 
 <a name="transition_styles" href="#transition_styles">#</a> <i>transition</i>.<b>styles</b>(<i>values</i>[, <i>priority</i>])
 
-Equivalent to [*selection*.styles](#selection_styles), but for transitions, on top of [*transition*.style](https://github.com/d3/d3-transition#transition_style).
+Like [*selection*.styles](#selection_styles), but for [*transition*.style](https://github.com/d3/d3-transition#transition_style).
