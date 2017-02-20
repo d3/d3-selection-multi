@@ -15,7 +15,7 @@
     "url": "http://bost.ocks.org/mike"
   },
   "main": "build/d3-selection-multi.js",
-  "jsnext:main": "index",
+  "module": "index",
   "repository": {
     "type": "git",
     "url": "https://github.com/d3/d3-selection-multi.git"
