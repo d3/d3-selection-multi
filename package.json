@@ -35,7 +35,7 @@
     "eslint": "3",
     "jsdom": "9",
     "package-preamble": "0.0",
-    "rimraf": "^2.6.1",
+    "rimraf": "2",
     "rollup": "0.41",
     "tape": "4",
     "uglify-js": "2"
