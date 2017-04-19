@@ -75,6 +75,18 @@ var div = d3.selectAll("div")
 </script>
 ```
 
+Or, as a module.
+
+
+```javascript
+import * as d3 from 'd3/build/d3.node';
+import d3SelectMulti from 'd3-selection-multi';
+
+var div = d3.selectAll("div")
+    .attrs({title: "Hello, world!"})
+    .styles({"color": "red"});
+```
+
 [Try d3-selection-multi in your browser.](https://tonicdev.com/npm/d3-selection-multi)
 
 ## API Reference
